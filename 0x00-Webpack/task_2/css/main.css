@@ -1,4 +1,5 @@
 #count {
+    display: inline;
     font-weight: bold;
     margin-left: 0; /* Add some margin for separation */
   }
@@ -6,6 +7,6 @@
 #logo {
     width: 200px;
     height: 200px;
-    background: url(../assets/holberton-logo.jpg);
+    background: url('../assets/holberton-logo.jpg');
     background-size: 200px 200px;
 }
