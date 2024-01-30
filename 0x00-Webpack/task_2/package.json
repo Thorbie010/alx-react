@@ -16,9 +16,11 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "css-loader": "^6.9.1",
     "file-loader": "^6.2.0",
     "image-webpack-loader": "^8.1.0",
     "jquery": "^3.7.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "style-loader": "^3.3.4"
   }
 }
