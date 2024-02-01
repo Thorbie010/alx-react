@@ -1,0 +1,24 @@
+.Notifications {
+    border: 1px dashed #E0434C; /* Add your desired border style */
+     /* Add your desired padding value */
+  }
+
+.Notifications ul {
+  list-style-type: disc; /* Use 'disc' for bullet points, adjust as needed */
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+.Notifications ul li[data-priority="default"] {
+  color: blue;
+}
+
+.Notifications ul li[data-priority="urgent"] {
+  color: red;
+}
+
+.Notifications p {
+  padding-top: 2rem;
+  padding-left: 0.5rem;
+}

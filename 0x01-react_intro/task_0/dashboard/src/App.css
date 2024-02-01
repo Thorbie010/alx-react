@@ -1,0 +1,62 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.App-header, .App-body, .App-footer {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.App-header h1, .App-header img {
+  flex: 1 0 1;
+}
+
+.App-header h1 {
+  margin-top: 70px;
+  color: rgb(220, 58, 58);
+}
+.App-header img {
+  height: 200px;
+  width: 200px;
+}
+
+.header-line {
+  border-bottom: 2px solid rgb(220, 58, 58); 
+  position: absolute;
+  bottom: 0; 
+  width: 100%;
+}
+.App-body p {
+  margin: 40px 0 0 40px;
+}
+
+.App-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  justify-content: center;
+ }
+
+.footer-line {
+  border-top: 2px solid rgb(220, 58, 58); /* 1px solid black line */
+  width: 100%; /* Span the entire width of the footer */
+}
+
+.App-footer p {
+  margin: 10px 0 0;
+  font-style: italic;
+  margin-left: 50px;
+
+}
+
+
+
+
