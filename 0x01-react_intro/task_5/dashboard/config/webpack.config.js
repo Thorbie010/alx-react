@@ -7,11 +7,18 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   devServer: {
-    contentBase: './dist',
+    static: './dist',
     hot: true,
   },
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
