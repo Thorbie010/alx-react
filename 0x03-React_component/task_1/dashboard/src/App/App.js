@@ -1,14 +1,11 @@
-import React from 'react';
-/* Components */
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Login from '../Login/Login';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import CourseList from '../CourseList/CourseList';
 import Notifications from '../Notifications/Notifications';
 import { getLatestNotification } from '../utils/utils';
-/* Proptypes */
-import { bool } from 'prop-types';
-/* Styles */
 import './App.css';
 
 const listCourses = [
@@ -41,20 +38,19 @@ class App extends Component {
     if (event.ctrlKey && event.key === 'h') {
       event.preventDefault();
       alert('Logging you out');
-      this.props.logOut();
+      this.props.logOut(); // Call the logout function
     }
   }
 
-  render (){
+  render() {
+    const { isLoggedIn } = this.props;
+
     return (
       <>
         <Notifications listNotifications={listNotifications} />
         <div className="App">
-          {/* Header */}
           <Header />
-          {/* Body */}
-          {this.props.isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
-          {/* Footer */}
+          {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
           <Footer />
         </div>
       </>
@@ -64,12 +60,11 @@ class App extends Component {
 
 App.propTypes = {
   isLoggedIn: PropTypes.bool,
-  logOut: PropTypes.func,
+  logOut: PropTypes.func.isRequired, // logOut function is required
 };
 
 App.defaultProps = {
   isLoggedIn: false,
-  logOut: () => void(0),
 };
 
 export default App;
