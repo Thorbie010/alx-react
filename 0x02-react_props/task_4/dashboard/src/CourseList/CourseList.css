@@ -1,0 +1,12 @@
+.CourseList_container {
+    border: 1px solid #ccc;
+    margin: 2rem auto;
+    width: 80%;
+  }
+  .CourseList_container th {
+    padding: .3rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .CourseList_container tr:nth-of-type(2) {
+    text-align: left;
+  }
