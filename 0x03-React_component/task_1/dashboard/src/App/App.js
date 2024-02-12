@@ -29,8 +29,12 @@ class App extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  ComponentDidMount() {
+  componentDidMount() {
     document.addEventListener("keydown", this.handleClick);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleClick);
   }
 
   handleClick(event) {
