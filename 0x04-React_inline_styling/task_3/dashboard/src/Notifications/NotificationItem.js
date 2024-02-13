@@ -5,22 +5,25 @@ import { StyleSheet, css } from 'aphrodite';
 class NotificationItem extends Component {
   render() {
     const { type, value, html, markAsRead, id } = this.props;
+    
     return (
       <li
         className={
-          type === 'default'
-            ? css(styles.defaultNotification)
-            : css(styles.urgentNotification)
+          `${css(styles.notificationList)} ${
+            type === 'default'
+              ? css(styles.defaultNotification)
+              : css(styles.urgentNotification)
+          }`
         }
         data-notification-type={type}
         onClick={() => markAsRead(id)}
-        style={{ fontSize: '20px', padding: '10px 8px', width: '100%', borderBottom: '1px solid black' }}>
+      >
         {html ? (
           <div dangerouslySetInnerHTML={html}></div>
         ) : (
           <span>{value}</span>
         )}
-      </li>
+    </li>
     );
   }
 }
@@ -44,6 +47,17 @@ const styles = StyleSheet.create({
   },
   urgentNotification: {
     color: 'red',
+  },
+  notificationList: {
+    position: 'relative',
+    paddingRight: '3rem',
+    '@media (max-width: 900px)': {
+      padding: '10px 8px',
+      width: '100%',
+      fontSize: '20px',
+      borderBottom: '1px solid black',
+      listStyleType: 'none'
+    },
   },
 });
 

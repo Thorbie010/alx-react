@@ -35,7 +35,7 @@ class Notifications extends Component {
             <button onClick={() => buttonClick()} aria-label="Close" className={css(styles.closeButton)}>
               <img alt="close icon" src={close_icon} className={css(styles.closeIcon)} />
             </button>
-            <p>Here is the list of notifications</p>
+            <p className={css(styles.paragraph)}>Here is the list of notifications</p>
             <ul className={css(styles.notificationList)}>
               {listNotifications.map(notification => {
                 console.log("Rendering notification:", notification.id); // Log each notification being rendered
@@ -88,6 +88,11 @@ const styles = StyleSheet.create({
       background: 'white'
     },
   },
+  paragraph: {
+    '@media (max-width: 900px)': {
+      fontSize: '20px'
+    }
+  },
   fullScreen: {
     padding: 0,
   },
@@ -107,8 +112,11 @@ const styles = StyleSheet.create({
     position: 'relative',
     paddingRight: '3rem',
     '@media (max-width: 900px)': {
-      padding: 0,
+      padding: '10px 8px',
+      width: '100%',
       fontSize: '20px',
+      listStyleType: 'none',
+      paddingLeft: '0'
     },
   },
 });
