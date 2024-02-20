@@ -1,5 +1,6 @@
 import { Map } from 'immutable';
 
+
 /**
  * Converts a JavaScript object into an Immutable Map.
  * @param {Object} object - The JavaScript object to convert.
