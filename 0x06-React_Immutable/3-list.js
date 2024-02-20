@@ -1,5 +1,6 @@
 import { List } from 'immutable';
 
+
 // Function to convert an array into an immutable List
 export function getListObject(array) {
     return List(array);
