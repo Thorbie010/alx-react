@@ -5,7 +5,7 @@ import { Map } from 'immutable';
  * @param {Object} object - The JavaScript object to convert.
  * @returns {Map} - The Immutable Map representation of the object.
  */
-export function getImmutableObject(object) {
+export default function getImmutableObject(object) {
   // Convert the object to Immutable Map
   return Map(object);
 }
